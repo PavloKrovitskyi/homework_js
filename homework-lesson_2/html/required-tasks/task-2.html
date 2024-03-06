@@ -38,6 +38,7 @@
           let sum = numA + numB
           let multiple = numA * numB
           let division = numA / numB
+          let fixedDivision = division.toFixed(3)
           document.write(`
           <p>Число <span>a=${numA}</span></p>
           <p>Число <span>b=${numB}</span></p>
@@ -67,7 +68,7 @@
               <th>Результат обчислення</th>
               <td>${sum}</td>
               <td>${multiple}</td>
-              <td>${division}</td>
+              <td>${fixedDivision}</td>
             </tr>
           </tbody>
         </table>

@@ -28,9 +28,11 @@
           const SECONDS_IN_MINUTE = 60
           const SECONDS_IN_HOUR = 3600
           let minutes = SECONDS_FROM_START_DAY / SECONDS_IN_MINUTE
+          let fixedMinutes = minutes.toFixed(2)
           let hours = SECONDS_FROM_START_DAY / SECONDS_IN_HOUR
+          let fixedHours = hours.toFixed(2)
           document.write(`
-          <p>Вказано проміжок часу від початку доби у секундах: <span>${SECONDS_FROM_START_DAY}</span>с <br> Це становить кількість хвилин: <span>${minutes}</span>хв. <br> Це становить кількість годин: <span>${hours}</span>год.</p>`)
+          <p>Вказано проміжок часу від початку доби у секундах: <span>${SECONDS_FROM_START_DAY}</span>с <br> Це становить кількість хвилин: <span>${fixedMinutes}</span>хв. <br> Це становить кількість годин: <span>${fixedHours}</span>год.</p>`)
         </script>
       </div>
     </main>
