@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 5</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №5</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+          const SECONDS_FROM_START_DAY = parseInt(prompt('Введіть кількість секунд, наприклад 3600'))
+          const SECONDS_IN_MINUTE = 60
+          const SECONDS_IN_HOUR = 3600
+          let minutes = SECONDS_FROM_START_DAY / SECONDS_IN_MINUTE
+          let hours = SECONDS_FROM_START_DAY / SECONDS_IN_HOUR
+          document.write(`
+          <p>Вказано проміжок часу від початку доби у секундах: <span>${SECONDS_FROM_START_DAY}</span>с <br> Це становить кількість хвилин: <span>${minutes}</span>хв. <br> Це становить кількість годин: <span>${hours}</span>год.</p>`)
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

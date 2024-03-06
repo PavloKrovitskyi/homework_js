@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 2</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Не Обов'язкове Завдання №2</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <script>
+          let salary = parseFloat(prompt('Введіть розмір заробітньої плати', ''))
+          let subsistenceMinimum = parseFloat(prompt('Введіть суму теперішнього прожиткового мінімуму', ''))
+          if (subsistenceMinimum < salary) {
+            document.write(`<p>Вам не нараховано соціальної виплати тому що розмір вашої заробітньої плати становить <span>${salary}</span>грн, <br> це більший за розмір прожиткового мінімуму який становить <span>${subsistenceMinimum}</span>грн </p>`)
+          } else {
+            let socialAssistance = subsistenceMinimum - salary
+            document.write(`<p>Розмір соціальної виплати становить: <span>${socialAssistance}грн</span></p>`)
+          }
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

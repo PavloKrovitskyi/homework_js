@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 6</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №6</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <style>
+          th,
+          td {
+            border: 1px solid #00a0d1;
+            padding: 5px 10px;
+            text-align: center;
+          }
+
+          td span {
+            color: var(--decor-color);
+            font-weight: 700;
+          }
+        </style>
+        <script>
+          const NUMBERS_FIRST_PRODUCT = parseInt(prompt('Введіть кількість першого продукту, наприклад 3'))
+          const PRICE_FIRST_PRODUCT = parseFloat(prompt('Введіть ціну першого продукту, наприклад 35,6').replace(',', '.'))
+
+          const NUMBERS_SECOND_PRODUCT = parseInt(prompt('Введіть кількість другого продукту, наприклад 3'))
+          const PRICE_SECOND_PRODUCT = parseFloat(prompt('Введіть ціну другого продукту, наприклад 35,6').replace(',', '.'))
+
+          const NUMBERS_THIRD_PRODUCT = parseInt(prompt('Введіть кількість третього продукту, наприклад 3'))
+          const PRICE_THIRD_PRODUCT = parseFloat(prompt('Введіть ціну третього продукту, наприклад 35,6').replace(',', '.'))
+
+          let totalPriceFirstProduct = NUMBERS_FIRST_PRODUCT * PRICE_FIRST_PRODUCT
+          let fixedPriceFirstProduct = totalPriceFirstProduct.toFixed(2)
+
+          let totalPriceSecondProduct = NUMBERS_SECOND_PRODUCT * PRICE_SECOND_PRODUCT
+          let fixedPriceSecondProduct = totalPriceSecondProduct.toFixed(2)
+
+          let totalPriceThirdProduct = NUMBERS_THIRD_PRODUCT * PRICE_THIRD_PRODUCT
+          let fixedPriceThirdProduct = totalPriceThirdProduct.toFixed(2)
+
+          let totalPrice = totalPriceFirstProduct + totalPriceSecondProduct + totalPriceThirdProduct
+          let fixedtotalPrice = totalPrice.toFixed(2)
+
+          document.write(`
+          <table>
+          <tbody>
+            <tr>
+              <th>Продукт "1"</th>
+              <td>Кількість <span>${NUMBERS_FIRST_PRODUCT}</span>шт</td>
+              <td>Ціна <span>${PRICE_FIRST_PRODUCT}</span>грн</td>
+              <td>Сума <span>${fixedPriceFirstProduct}</span>грн</td>
+            </tr>
+            <tr>
+              <th>Продукт "2"</th>
+              <td>Кількість <span>${NUMBERS_SECOND_PRODUCT}</span>шт</td>
+              <td>Ціна <span>${PRICE_SECOND_PRODUCT}</span>грн</td>
+              <td>Сума <span>${fixedPriceSecondProduct}</span>грн</td>
+            </tr>
+            <tr>
+              <th>Продукт "3"</th>
+              <td>Кількість <span>${NUMBERS_THIRD_PRODUCT}</span>шт</td>
+              <td>Ціна <span>${PRICE_THIRD_PRODUCT}</span>грн</td>
+              <td>Сума <span>${fixedPriceThirdProduct}</span>грн</td>
+            </tr>
+            <tr>
+              <th>Загальна сума</th>
+              <td colspan="3"><span>${fixedtotalPrice}</span>грн</td>
+            </tr>
+          </tbody>
+        </table>`)
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

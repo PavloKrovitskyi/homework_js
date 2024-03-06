@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 8</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Не Обов'язкове Завдання №8</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <script>
+          let inputYear = parseInt(prompt('Введіть рік, приклад 1986'))
+          const firstCenturyYear = 1
+          const yearInCentury = 100
+          const adjustedYear = inputYear - firstCenturyYear;
+          const centuryNumber = Math.floor(adjustedYear / yearInCentury) + firstCenturyYear;
+          document.write(`<p>Це: <span>${centuryNumber}-е</span> століття</p>`)
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

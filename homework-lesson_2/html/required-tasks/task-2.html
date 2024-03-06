@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 1</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №1</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <style>
+          th,
+          td {
+            border: 1px solid #00a0d1;
+            padding: 5px 10px;
+            text-align: center;
+          }
+        </style>
+
+        <script>
+          let numA = parseFloat(prompt('Введіть число "а"'))
+          let numB = parseFloat(prompt('Введіть число "b"'))
+          let sum = numA + numB
+          let multiple = numA * numB
+          let division = numA / numB
+          document.write(`
+          <p>Число <span>a=${numA}</span></p>
+          <p>Число <span>b=${numB}</span></p>
+        <table>
+          <thead>
+            <tr>
+              <th style="border: 1px solid #7f807d;"></th>
+              <th>Сума</th>
+              <th>Множення</th>
+              <th>Ділення</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Число "A"</th>
+              <td>${numA}</td>
+              <td>${numA}</td>
+              <td>${numA}</td>
+            </tr>
+            <tr>
+              <th>Число "B"</th>
+              <td>${numB}</td>
+              <td>${numB}</td>
+              <td>${numB}</td>
+            </tr>
+            <tr>
+              <th>Результат обчислення</th>
+              <td>${sum}</td>
+              <td>${multiple}</td>
+              <td>${division}</td>
+            </tr>
+          </tbody>
+        </table>
+          `)
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

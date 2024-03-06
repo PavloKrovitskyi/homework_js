@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 0</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №0</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+          let numA = parseFloat(prompt('Введіть число "а"'))
+          let numB = parseFloat(prompt('Введіть число "b"'))
+          let numC = parseFloat(prompt('Введіть число "с"'))
+          let S1 = numA + 12 + numB
+          let S2 = Math.sqrt((numA + numB) / (2 * numA))
+          let S3 = Math.cbrt((numA + numB) * numC)
+          let S4 = Math.sin(numA / -numB)
+          document.write(`
+          <p>Число <span>a=${numA}</span></p>
+          <p>Число <span>b=${numB}</span></p>
+          <p>Число <span>c=${numC}</span></p>
+          <p><span>1)</span> Результат обчислення S1=${numA}+12+${numB} становить: <span>${S1}</span></p>
+          <p><span>2)</span> Результат обчислення S2=√(${numA}+${numB})/(2*${numA})становить: <span>${S2}</span></p>
+          <p><span>3)</span> Результат обчислення S3=√3(${numA}+${numB})*${numC}становить: <span>${S3}</span></p>
+          <p><span>4)</span> Результат обчислення S4=sin⁡(${numA} / -${numB}) становить: <span>${S4}</span></p>
+          `)
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

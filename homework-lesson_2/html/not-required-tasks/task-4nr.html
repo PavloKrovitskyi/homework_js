@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 4</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Не Обов'язкове Завдання №4</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <script>
+          let childAge = parseInt(prompt('Введіть вік дитини'))
+          let startKindergartenAge = 2
+          let startScholtAge = 6
+          let endScholAge = 18
+          let endhUniversityAge = 22;
+
+          let yearUntilGoKindergarten = childAge >= startKindergartenAge ? 0 : startKindergartenAge - childAge;
+          let yearUntilGoSchol = childAge >= startScholtAge ? 0 : startScholtAge - childAge;
+          let yearUntilFinishSchol = childAge >= endScholAge ? 0 : endScholAge - childAge;
+          let yearUntilGoUniversity = childAge >= endScholAge ? 0 : endScholAge - childAge;
+          let yearUntilEndUniversity = childAge >= endhUniversityAge ? 0 : endhUniversityAge - childAge;
+
+          document.write(`<p>Вік дитини <span>${childAge}</span>р <br> Вона піде до дитячого садочку за <span>${yearUntilGoKindergarten}</span>р <br> Вона піде до школи за <span>${yearUntilGoSchol}</span>р <br> Вона завершить школу за <span>${yearUntilFinishSchol}</span>р <br> Вона вступить до ВУЗу за <span>${yearUntilGoUniversity}</span>р <br> Вона завершить вуз за <span>${yearUntilEndUniversity}</span>р</p>`)
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 3</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Не Обов'язкове Завдання №3</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <script>
+          let quantityFirstProduct = parseInt(prompt('Введіть кількість першого товару'))
+          let priseFirstProduct = parseFloat(prompt('Введіть ціну першого товару').replace(',', '.'))
+          let quantitySecondProduct = parseInt(prompt('Введіть кількість другого товару'))
+          let priseSecondProduct = parseFloat(prompt('Введіть ціну другого товару').replace(',', '.'))
+
+          let totalPriseFirstProduct = quantityFirstProduct * priseFirstProduct
+          let totalPriseSecondProduct = quantitySecondProduct * priseSecondProduct
+
+          let totalPriseAllProduct = totalPriseFirstProduct + totalPriseSecondProduct
+
+          document.write(`<p>Вартість першого товару <span>${priseFirstProduct}</span>грн. <br> Вартість другого товару <span>${priseSecondProduct}</span>грн. <br> Загальна вартість першого товару становить <span>${totalPriseFirstProduct}</span>грн. <br> Загальна варість другого товару становить <span>${totalPriseSecondProduct}</span>грн. <br> Загальна вартість обох продуктів становить <span>${totalPriseAllProduct}</span>грн.</p>`)
+
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

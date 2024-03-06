@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 6</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Не Обов'язкове Завдання №6</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <script>
+
+          let a = prompt('Введіть значення для змнної а')
+          let b = prompt('Введіть значення для змнної b')
+          let c = prompt('Введіть значення для змнної c')
+
+          let aBefore = a // зберігаємо початкове значення
+          let bBefore = b // зберігаємо початкове значення
+          let cBefore = c // зберігаємо початкове значення
+
+          a = b
+          b = c
+          c = aBefore
+
+          document.write(`<p> Дано a = <span>${aBefore}</span>, b = <span>${bBefore}</span>, c = <span>${cBefore}</span> <br> Після зміни за умовами задачі <br> a набуває значення b: <span>a = ${a}</span> <br> b набуває значення c: <span>b = ${b}</span> <br> c набуває попереднє значення a: <span>c = ${c}</span> </p>`)
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
