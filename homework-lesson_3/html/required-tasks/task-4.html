@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 4</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №4</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+
+          let inputAge = parseInt(prompt("Введіть вік людини, приклад 29"))
+
+          let kindergartenAge = 3
+          let schoolAge = 7
+          let studentAge = 18
+          let workAge = 22
+          let retirementAge = 60
+
+          switch (true) {
+            case inputAge < kindergartenAge:
+              document.write(`<p>Це дитина яка молодше <span>${kindergartenAge}-х</span> років.<p>`)
+              break;
+
+            case inputAge >= kindergartenAge && inputAge < schoolAge:
+              document.write(`<p>Це дитина ходить у <span>дитячий садочок</span>.<p>`)
+              break;
+
+            case inputAge >= schoolAge && inputAge < studentAge:
+              document.write(`<p>Це дитина навчається у <span>школі</span>.<p>`)
+              break;
+
+            case inputAge >= studentAge && inputAge < workAge:
+              document.write(`<p>Це студент(ка) і навчається у <span>ВНЗ</span>.<p>`)
+              break;
+
+            case inputAge >= workAge && inputAge < retirementAge:
+              document.write(`<p>Це працівник і він працює на <span>роботі</span>.<p>`)
+              break;
+
+            case inputAge >= retirementAge:
+              document.write(`<p>Це <span>пенсіонер</span>.<p>`)
+              break;
+
+            default:
+              document.write("Вказано не коректне значення для віку, введіть вік, приклад: 25")
+              break;
+          }
+
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 7</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №7</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+
+          let monthNumber = parseInt(prompt("Введіть номер місяця від 1 до 12, приклад: 5"));
+
+          switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+              document.write("<p>Цей місяць відноситься до <span>Зими</span></p>");
+              break;
+            case 3:
+            case 4:
+            case 5:
+              document.write("<p>Цей місяць відноситься до <span>Весни</span></p>");
+              break;
+            case 6:
+            case 7:
+            case 8:
+              document.write("<p>Цей місяць відноситься до <span>Літа</span></p>");
+              break;
+            case 9:
+            case 10:
+            case 11:
+              document.write("<p>Цей місяць відноситься до <span>Осені</span></p>");
+              break;
+            default:
+              document.write("<p>Не вірно вказано номер місяця, вкажіть номер від <span>1 до 12</span>, приклад: 8<p>");
+              break;
+          }
+
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

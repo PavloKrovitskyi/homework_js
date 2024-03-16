@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 2</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №2</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+
+          let priceProduct = parseFloat(prompt("Введіть ціну товару, приклад 25,55").replace(",", "."))
+          let amountMoney = parseFloat(prompt("Введіть кількість грошей яка у вас є, приклад 20,55").replace(",", "."))
+          let loteryTicketPrice = 4
+
+          if (priceProduct > amountMoney) {
+            document.write(`<p>Нажаль у вас не достатньо коштів для оплати цього товару</p>`)
+          } else {
+            document.write(`<p>У вас достатньо коштів для купівлі цього товару, також у нас є квитки миттєвої лотереї за <span>${loteryTicketPrice}</span>грн, максимальний виграш якої становить <span>100 000</span>грн</p>`)
+          }
+
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

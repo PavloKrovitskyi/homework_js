@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 1</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №1</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <script>
+
+          let firstChildName = prompt("Введіть ім'я першої дитини, приклад Іван")
+          let amountCandyFirstChild = parseInt(prompt("Введіть кількість цукерок що є у першої дитини, приклад 22"))
+
+          let secondChildName = prompt("Введіть ім'я другої дитини, приклад Павло")
+          let amountCandySecondChild = parseInt(prompt("Введіть кількість цукерок що є у першої дитини, приклад 22"))
+
+          if (amountCandyFirstChild > amountCandySecondChild) {
+            document.write(`<p>Цукерок більше у дитини з ім'ям <span>${firstChildName}</span></p>`)
+
+          } else if (amountCandySecondChild > amountCandyFirstChild) {
+            document.write(`<p>Цукерок більше у дитини з ім'ям <span>${secondChildName}</span></p>`)
+          }
+
+          else if (amountCandySecondChild === amountCandyFirstChild) {
+            document.write(`<p><span>${firstChildName}</span> та <span>${secondChildName}</span> мають однакову кількість цукерок, а саме <span>${amountCandyFirstChild}</span> та <span>${amountCandySecondChild}</span></p>`)
+          }
+
+          else {
+            document.write('не правильно вказані значення')
+          }
+
+        </script>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
