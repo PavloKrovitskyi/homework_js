@@ -217,6 +217,14 @@ a:hover::before {
   transition: left 0.9s;
 }
 
+.button-fixed {
+  position: fixed;
+  width: 180px;
+  height: auto;
+  top: 15px;
+  left: 20px;
+}
+
 /*========================================================================================================================================================*/
 .footer {
   text-align: center;
