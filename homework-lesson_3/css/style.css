@@ -151,6 +151,9 @@ li > a {
 li > a:not(:last-child) {
   margin-bottom: 10px;
 }
+li a:visited {
+  color: rgb(220, 82, 255);
+}
 
 li > p {
   line-height: 1.3;
