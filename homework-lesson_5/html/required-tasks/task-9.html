@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 12</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №12</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+
+        <style>
+          .game {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            background: goldenrod url('../../img/game-image/gold-coins.webp') center / cover no-repeat;
+            padding: 50px 0;
+            border-radius: 30px;
+          }
+
+          .game-images img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            max-width: 300px;
+            width: 100%;
+          }
+
+          .win-text {
+            font-size: 35px;
+            padding: 15px 25px;
+            background-color: rebeccapurple;
+            border-radius: 30px;
+          }
+        </style>
+
+        <div class="game">
+          <script>
+            let winNum1 = 0
+            let winNum2 = 0
+            let winNum3 = 0
+            let winNum4 = 0
+
+            document.write(`<div class="game-images">`)
+
+            const minValue = 1 //мінімальне значення
+            const maxValue = 4 //максимальне значення
+            for (let itemImage = 1; itemImage <= 3; itemImage++) {
+              let randomPrizeImage = minValue + Math.floor(Math.random() * (maxValue - minValue + 1))
+
+              switch (randomPrizeImage) {
+                case 1:
+                  winNum1++
+                  break;
+                case 2:
+                  winNum2++
+                  break;
+                case 3:
+                  winNum3++
+                  break;
+                case 4:
+                  winNum4++
+                  break;
+              }
+
+              document.write(`<img src="../../img/game-image/image(${randomPrizeImage}).png" width="300" height="300" alt="emoji">`)
+            }
+            let result = 0
+            switch (3) {
+              case winNum1:
+                result = 100
+                break;
+              case winNum2:
+                result = 200
+                break;
+              case winNum3:
+                result = 500
+                break;
+              case winNum4:
+                result = 1000
+                break;
+            }
+
+            document.write(`</div>`)
+
+            let winText = document.write(`<p class="win-text">Ви виграли <span>${result}</span>грн</p>`)
+            const startButton = document.write(`<button class="start-game-btn button"><span>Грати</span></button>`)
+
+            const playBtn = document.querySelector('.start-game-btn')
+            playBtn.addEventListener('click', reloadFunk)
+            function reloadFunk() {
+              location.reload()
+            }
+          </script>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

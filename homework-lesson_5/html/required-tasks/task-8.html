@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 8</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №8</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат:</span></p>
+
+        <style>
+          .text-wrapper p:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        </style>
+
+        <div class="text-wrapper">
+          <script>
+            let rangeNum = parseFloat(prompt('Через кому введіть діапазон чисел для вгадування приклад: 1,10').replace(',', '.'))
+
+            let integerNum = Math.floor(rangeNum)
+            let fractionalNum = Math.round((rangeNum - integerNum) * 100)
+
+            let userNumber = parseInt(prompt('Загадайте число у вказаному вами діапазоні'))
+            let computerGuess
+
+            document.write(
+              `
+              <p>Ви ввели діапазон чисел від <span>${integerNum}</span> до <span>${fractionalNum}</span></p>
+              <p>Ви загадали число <span>${userNumber}</span></p>
+              `
+            )
+
+            for (let i = 1; i <= 3; i++) {
+              computerGuess = Math.floor(Math.random() * fractionalNum) + integerNum;
+              let isCorrectNum = confirm(`Ваше число ${computerGuess} якщо ні то натисніть кнопку Скасувати`);
+
+              document.write(`<p>Число яке вказав комп'ютер <span>${computerGuess}</span></p>`)
+
+              if (isCorrectNum) {
+                alert("Комп'ютер вгадав ваше число!");
+                break;
+              } else if (i === 3) {
+                alert("На жаль, комп'ютер не зміг вгадати ваше число.");
+              }
+            }
+
+
+
+          </script>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

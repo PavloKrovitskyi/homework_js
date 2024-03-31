@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 2</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №2</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат обчислення:</span></p>
+        <style>
+          .product-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .product-item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 16px;
+
+          }
+
+          .product-item label {
+            max-width: 110px;
+            width: 100%;
+          }
+
+          .product-item label span {
+            color: var(--decor-color);
+          }
+
+          .product-item input {
+            padding: 5px 15px;
+            color: #000;
+          }
+        </style>
+        <div class="product-items">
+          <script>
+
+            for (let productItem = 1; productItem <= 10; productItem++) {
+              document.write(
+                `
+              <div class="product-item">
+                <label>Product <span>№ ${productItem}</span></label> 
+                <input type="text" placeholder="Введіть ціну продукту">
+              </div>
+              `
+              )
+            }
+
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
