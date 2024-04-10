@@ -22,7 +22,7 @@
 
     <main class="main">
       <div class="main__container">
-        <p><span>Результат обчислення:</span></p>
+        <p><span>Результат "трикутник":</span></p>
         <script>
 
           //кількість рядків у трикутнику
@@ -32,7 +32,7 @@
           for (let triangle = 1; triangle <= rows; triangle++) {
             //цикл для виведення елементів у поточному рядку
             let symbol = ''
-            for (let j = 1; j <= i; j++) {
+            for (let j = 1; j <= triangle; j++) {
               symbol += 'o'
             }
             document.write(`${symbol} <br>`)

@@ -8,6 +8,38 @@
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
   <title>JS Task 4</title>
+  <style>
+    .block {
+      text-align: center;
+    }
+
+    .block>p {
+      font-size: 20px;
+    }
+
+    .block>p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .box {
+      text-align: left;
+      padding: 30px 0;
+    }
+
+    .box p {
+      padding: 10px 15px;
+      background-color: rgb(10, 33, 109);
+      border-radius: 3px;
+    }
+
+    .box p:nth-child(odd) {
+      background-color: rgb(57, 56, 65);
+    }
+
+    .box p:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,26 +54,33 @@
 
     <main class="main">
       <div class="main__container">
-        <p><span>Результат:</span></p>
+        <div class="block">
 
-        <script>
+          <script>
 
-          let startSum = parseFloat(prompt('Введіть початкову суму депозиту, наприклад 25035,65').replace(',', '.'))
-          const yearPercent = 20 / 100
-          const TAXPercent = 5 / 100
+            let startSum = parseFloat(prompt('Введіть початкову суму депозиту, наприклад 2000,65').replace(',', '.'))
+            const yearPercent = 20 / 100
+            const TAXPercent = 5 / 100
 
-          sumPerYear = startSum
-          for (let yaers = 1; yaers <= 20; yaers++) {
-            sumPerYear += sumPerYear * yearPercent
-            let profitYearSum = (sumPerYear - startSum)
-            let TAXSum = profitYearSum * TAXPercent
-            let nettoProfitSum = profitYearSum - TAXSum
-            let totalSumWithTAX = startSum + nettoProfitSum
-            document.write(`<p>Сума з відсотками за <span>${yaers}</span>-й рік становить <span>${totalSumWithTAX.toFixed(2)}</span></p>`)
-          }
+            document.write(`<p>Початковий внесок становить <span>${startSum}</span></p>`)
+            document.write(`<p>Відсоток за рік становить <span>${yearPercent * 100}</span>%</p>`)
+            document.write(`<p>Податок на дохід становить <span>${TAXPercent * 100}</span>% від суми доходу</p>`)
 
-        </script>
+            document.write('<div class="box">')
+            sumPerYear = startSum
+            for (let yaers = 1; yaers <= 20; yaers++) {
+              sumPerYear += sumPerYear * yearPercent
+              let profitYearSum = (sumPerYear - startSum)
+              let TAXSum = profitYearSum * TAXPercent
+              let nettoProfitSum = profitYearSum - TAXSum
+              let totalSumWithTAX = startSum + nettoProfitSum
+              document.write(`<p>Загальна сума за <span>${yaers}</span>-й рік становить <span>${totalSumWithTAX.toFixed(2)}</span>грн, дохід за період <span>${yaers}</span>р. становить <span>${nettoProfitSum.toFixed(2)}</span>грн, сума податку становить <span>${TAXSum.toFixed(2)}</span>грн. </p>`)
+            }
 
+            document.write('</div>')
+
+          </script>
+        </div>
       </div>
     </main>
 
