@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <title>JS Task 3</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <h1>Завдання №3</h1>
+        <a class="button" href="../../index.html">Назад на сторінку ДЗ</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <p><span>Результат:</span></p>
+
+        <script>
+
+          let startSum = parseFloat(prompt('Введіть початкову суму депозиту, наприклад 25035,65').replace(',', '.'))
+          const yearPercent = 20 / 100
+
+          for (let yaers = 1; yaers <= 20; yaers++) {
+            startSum += startSum * yearPercent
+            document.write(`<p>Сума з відсотками за <span>${yaers}</span>-й рік становить <span>${startSum.toFixed(2)}</span></p>`)
+          }
+
+        </script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="foter__container">
+        <h2>JS Course</h2>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

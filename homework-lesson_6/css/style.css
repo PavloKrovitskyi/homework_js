@@ -95,6 +95,8 @@ h1 span {
 .main__block--required {
   border-bottom: 2px solid #ffffff;
 }
+.main__block--not-required {
+}
 
 h2 {
   text-transform: capitalize;
